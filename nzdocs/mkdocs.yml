@@ -1,0 +1,10 @@
+site_name: nzen
+theme:
+    name: material
+    palette:
+        scheme: slate
+        primary: pink
+markdown_extensions:
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
