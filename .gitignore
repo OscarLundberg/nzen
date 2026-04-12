@@ -3,5 +3,5 @@ node_modules
 dist
 consumer
 librust/target
-nzdocs/site
+docs/site
 .wrangler
