@@ -1,0 +1,10 @@
+{
+  "main": "src/index.ts",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "nzen-registry",
+      "database_id": "1e99d04d-c6cb-43cb-8a2d-a480aa4e376e"
+    }
+  ]
+}
