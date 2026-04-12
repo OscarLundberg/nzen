@@ -14,6 +14,6 @@ nzen aims to:
 - support multiple languages in tandem (via [WebAssembly](https://webassembly.org/))
 
 [and hope to in the future]
-- lower the barrier for sharing and reusing code
+- lower the barrier for sharing and reusing code for game systems 
 - support multiple platforms 
 - include gamedev library code such as 3D rendering, physics etc.

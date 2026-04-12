@@ -1,0 +1,49 @@
+:root,
+[data-bs-theme=dark],
+[data-bs-theme=light] {
+  --color-primary: #ff00f8 !important;
+  --bs-primary: rgb(255, 0, 248);
+  --bs-primary-rgb: 255, 0, 248 !important;
+  --bs-border-radius: 1.2em;
+  --bs-border-radius: 1.2em;
+  --bs-border-radius-sm: 1.2em;
+  --bs-border-radius-lg: 1.2em;
+  --bs-border-radius-xl: 1.2em;
+  --bs-border-radius-xxl: 1.2em;
+}
+
+.fullheight {
+  min-height: calc(100vh + 56px) !important;
+  height: calc(100vh + 56px) !important;
+}
+
+
+html,
+body,
+.container-fluid {
+  margin: 0;
+  padding: 0;
+  width: 100% !important;
+
+}
+
+html {
+  width: 100vw !important;
+}
+
+
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
+  text-shadow: 0px 2px 6px var(--color-primary);
+}
+
+.nz {
+  transition: color 0.5s ease;
+}
+
+.nz:hover {
+  color: var(--color-primary)
+}
