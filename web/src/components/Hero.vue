@@ -4,7 +4,7 @@ import CodeBlock from './CodeBlock.vue';
 import Page from './Page.vue';
 import env from "../env.json";
 const copied = ref(false);
-const command = `npx nzen init './my-project'`
+const command = `npm i -g @oscarlundberg/nzen\nnzen init "./my-project"`;
 function click() {
   copied.value = true;
   window.navigator.clipboard.writeText(command)

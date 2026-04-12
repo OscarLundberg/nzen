@@ -4,12 +4,15 @@ import CodeBlock from './CodeBlock.vue';
 import Page from './Page.vue';
 import env from "../env.json"
 
-const command = 'npx nzen init "./my-project"';
+const command = `npm i -g @oscarlundberg/nzen\nnzen init "./my-project"`;
 
 const steps = `
 # macOS, Linux, Windows
 1. make sure [[nodejs|https://nodejs.org/en/download]] is installed on your system 
-2. run \`${command}\`
+2. copy and run:
+\`\`\`
+${command}
+\`\`\`
 `
 
 const steps2 = `
