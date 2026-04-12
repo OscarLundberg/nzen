@@ -10,7 +10,7 @@ export function registerCommandCreate(cli: Command) {
   const create = cli.command("create")
     .description("Create a new module")
     .argument("[name]", "Name for the module")
-    .option("--language", "Programming language for the module")
+    .option("--language [LANGUAGE]", "Programming language for the module")
 
   create.action(async (name?: string) => {
     const opts = await inquirer.prompt(
