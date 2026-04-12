@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import packageJson from "../package.json"
 import { program } from "commander";
 import { registerCommandBuild } from "./commands/build";
