@@ -1,0 +1,12 @@
+{
+  "name": "@nzen/core",
+  "description": "core nzen types/library",
+  "authors": "author",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {}
+}

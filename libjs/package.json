@@ -2,7 +2,7 @@
   "name": "@nzen/libjs",
   "version": "1.0.0",
   "description": "",
-  "main": "lib.js",
+  "main": "dist/lib.js",
   "types": "src/lib.ts",
   "scripts": {
     "test": "ts-node src/bin.ts",
@@ -19,6 +19,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
+    "@nzen/core": "link:../core",
     "cli": "^1.0.1",
     "glob": "^13.0.6",
     "toml": "^3.0.0",

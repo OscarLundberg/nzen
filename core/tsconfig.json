@@ -1,6 +1,6 @@
 {
   "include": [
-    "src/**/*.ts",
+    "src/**/*",
   ],
   "compilerOptions": {
     "module": "nodenext",
@@ -8,8 +8,7 @@
     "esModuleInterop": true,
     "rootDir": "./src",
     "outDir": "dist",
-    "moduleResolution": "nodenext",
-    "skipLibCheck": true
+    "moduleResolution": "nodenext"
   },
   "exclude": [
     "node_modules"

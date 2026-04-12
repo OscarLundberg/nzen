@@ -1,15 +1,13 @@
 {
   "include": [
-    "./src/**/*.ts",
-    "src/template.tsx",
-    "src/entrypoint.js",
-    "../tool/src/template.ts"
+    "./src/**/*.ts"
   ],
   "compilerOptions": {
     "module": "nodenext",
     "target": "esnext",
     "esModuleInterop": true,
     "outDir": "dist",
+    "rootDir": "./src",
     "moduleResolution": "nodenext"
   },
   "exclude": [

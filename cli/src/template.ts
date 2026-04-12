@@ -9,13 +9,13 @@ export const htmlTemplate = `
     <script type="importmap">
     {
       "imports": {
-        "@nzen/lib": "./nzen.js"
+        "@nzen/engine": "./nzen.js"
       }
     }
     </script>
     <script type="module">
       import project from "./project.js"
-      import { NzEngine } from "@nzen/lib"
+      import { NzEngine } from "@nzen/engine"
       NzEngine.init(project)
     </script>
   </head>

@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@nzen/core':
+    specifier: link:../core
+    version: link:../core
   cli:
     specifier: ^1.0.1
     version: 1.0.1

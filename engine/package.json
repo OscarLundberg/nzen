@@ -1,0 +1,18 @@
+{
+  "name": "@nzen/engine",
+  "description": "standard nzengine implementation",
+  "authors": "author",
+  "version": "1.0.0",
+  "main": "dist/engine.js",
+  "types": "src/engine.ts",
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@nzen/core": "link:../core",
+    "vite": "^8.0.8"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0"
+  }
+}
