@@ -1,5 +1,5 @@
 {
-  "name": "nzen",
+  "name": "@oscarlundberg/nzen",
   "version": "0.1.0",
   "description": "",
   "main": "lib.js",
@@ -31,8 +31,5 @@
   "files": [
     "dist/**/*"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "repository": "https://github.com/OscarLundberg/nzen.git"
 }
