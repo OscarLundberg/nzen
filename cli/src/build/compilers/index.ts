@@ -1,3 +1,4 @@
+import { NzProjectConfig } from "@nzen/core";
 import { install } from "../install";
 import { NzJsModuleConfig, NzRustModuleConfig, NzTsModuleConfig } from "../modules";
 import { c } from "./c";
@@ -5,13 +6,9 @@ import { js } from "./js";
 
 export const compilers = {
   js,
-  async ts(conf: NzTsModuleConfig) {
+  async ts(conf: NzTsModuleConfig, proj) {
     /** Vite supports ts out of the box */
-    return js({ ...conf, type: "js" });
+    return js({ ...conf, type: "js" }, proj);
   },
-  // async rust(conf: NzRustModuleConfig) {
-  //   install.wasmpack()
-  //   throw new Error("NotImplemented");
-  // },
   c
-} satisfies Record<string, (arg0: never) => Promise<NzJsModuleConfig>>;
+} satisfies Record<string, (arg0: never, arg1: NzProjectConfig) => Promise<NzJsModuleConfig>>;

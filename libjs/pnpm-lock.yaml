@@ -14,6 +14,9 @@ dependencies:
   glob:
     specifier: ^13.0.6
     version: 13.0.6
+  reflect-metadata:
+    specifier: ^0.2.2
+    version: 0.2.2
   toml:
     specifier: ^3.0.0
     version: 3.0.0
@@ -590,6 +593,10 @@ packages:
       nanoid: 3.3.11
       picocolors: 1.1.1
       source-map-js: 1.2.1
+    dev: false
+
+  /reflect-metadata@0.2.2:
+    resolution: {integrity: sha512-urBwgfrvVP/eAyXx4hluJivBKzuEbSQs9rKWCrCkbSxNv8mxPcUZKeuoF3Uy4mJl3Lwprp6yy5/39VWigZ4K6Q==}
     dev: false
 
   /rolldown@1.0.0-rc.9:

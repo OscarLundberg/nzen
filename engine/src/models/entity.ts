@@ -1,4 +1,4 @@
-import { NzEntityConfig } from "@nzen/core";
+import { NzEntityConfig, type NzEntity as INzEntity } from "@nzen/core";
 import { NzEngine } from "../engine";
 import { NzInstance } from "./instance";
 
@@ -20,7 +20,7 @@ import { NzInstance } from "./instance";
  * let player1 = t1.createInstance();
  * let player2 = t1.createInstance();
  */
-export class NzEntity {
+export class NzEntity implements INzEntity {
   constructor(public config: NzEntityConfig) { }
   static getByName(name: string): NzEntity | null {
     const conf = NzEngine.instance?.project.entities?.[name] ?? null;
@@ -28,7 +28,7 @@ export class NzEntity {
     return null;
   }
 
-  createInstance(): NzInstance {
+  createInstance() {
     return new NzInstance(this);
   }
 }

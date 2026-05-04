@@ -4,7 +4,7 @@ import { NzEngine } from "./nzengine";
  * Represents a constructor for a `compiled` wasm module (or plain js class) that is ready for use within the engine
  */
 export interface NzCompiledModuleCtr {
-  new(arg0: NzEngine, values: Record<string, any>): NzCompiledModule
+  new(arg0: NzEngine, id: string, values?: Record<string, any>): NzCompiledModule
 }
 
 /**
@@ -13,4 +13,6 @@ export interface NzCompiledModuleCtr {
 export interface NzCompiledModule {
   update(): void;
   setup(): void;
+  readonly name: string;
+  allocateAndBindProps(): void;
 }

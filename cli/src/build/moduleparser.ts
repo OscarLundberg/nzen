@@ -11,8 +11,8 @@ import { AnyNzModuleConfig, NzCModuleConfig, NzJsModuleConfig, NzTsModuleConfig 
  * @param rootDir 
  * @returns 
  */
-export async function parseModule(filepath: string, rootDir: string): Promise<AnyNzModuleConfig> {
-  const [name, extension] = path.basename(filepath).split(".nzmod.")
+export async function parseModule(filepath: string, rootDir: string, splitPattern = ".nzmod."): Promise<AnyNzModuleConfig> {
+  const [name, extension] = path.basename(filepath).split(splitPattern)
 
   const config: NzModuleConfig = {
     name,

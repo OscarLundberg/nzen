@@ -28,3 +28,7 @@ export function parseEntity(filepath: string, rootDir: string) {
 export function isModule(path: string) {
   return path.includes(".nzmod")
 }
+
+export function isAsset(path: string) {
+  return path.includes(".nzasset")
+}

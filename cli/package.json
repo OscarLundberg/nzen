@@ -13,19 +13,27 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "^5.9.3",
+    "@babel/plugin-proposal-decorators": "^7.29.0",
+    "@rolldown/plugin-babel": "^0.2.3",
     "@types/cli": "^0.11.25",
-    "@types/shelljs": "^0.10.0"
+    "@types/http-server": "^0.12.4",
+    "@types/require-from-string": "^1.2.3",
+    "@types/shelljs": "^0.10.0",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
-    "ts-node": "^10.9.2",
     "@nzen/core": "file:../core",
+    "@rolldown/pluginutils": "1.0.0-rc.15",
+    "chokidar": "^5.0.0",
     "cli": "^1.0.1",
     "commander": "^14.0.3",
     "glob": "^13.0.6",
+    "http-server": "^14.1.1",
     "inquirer": "^13.4.1",
+    "require-from-string": "^2.0.2",
     "shelljs": "^0.10.0",
     "toml": "^3.0.0",
+    "ts-node": "^10.9.2",
     "vite": "^8.0.0"
   },
   "files": [

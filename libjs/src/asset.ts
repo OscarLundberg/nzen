@@ -8,24 +8,13 @@ import { NzModule } from "./module";
  * The preprocessing/import behaviour should be implemented in {@link preprocess}
  */
 export abstract class NzAsset extends NzModule {
-  constructor(file: string, engine: NzEngine) {
-    super(engine, {});
-
-
-  }
-
   /**
-   * Specify what extension this asset type uses
-   * @example ".png"
-   */
-  abstract extension: string;
-  /**
-   * This function will run before an asset with the given {@link extension} is imported
+   * This function will run before an asset of this type is imported
    * 
    * The function should handle reading and processing the file data.
    * Processed data can be stored on the class instance and will be accessible on import 
    * 
    * @param file 
    */
-  abstract preprocess(file: ArrayBuffer): void;
+  abstract preprocess(file: Uint8Array<ArrayBuffer>): void;
 }

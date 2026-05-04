@@ -11,9 +11,12 @@ export function registerCommandSchema(cli: Command) {
 
   schemabuilder.action(async (project: string) => {
     const opts = schemabuilder.opts();
-    const proj = await build({ project })
 
-    const schema = getJsonSchema(proj)
+    const outdir = "./dist"
+
+    const proj = await build({ project, writeToDisk: outdir })
+
+    const schema = getJsonSchema(proj, outdir)
     ShellString(JSON.stringify(schema, null, 4)).to(opts.output);
   })
 }

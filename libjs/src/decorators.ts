@@ -1,39 +1,58 @@
 import { NzPrimitive } from "@nzen/core";
+import { NzModule } from "./module";
 
 export const DECORATOR_META_PREFIX = "$$_NZ_"
 export type DecoratorMeta = {
   type: NzPrimitive,
+  /**
+   * The 'shared' key that is used in memory
+   */
   key: string;
+  /**
+   * The key that is used on the module
+   */
   propertyKey: string;
   initialValue: string | number | boolean
 }
 
 export function nzfloat(key?: string) {
-  return (target: any, propertyKey: ClassFieldDecoratorContext<unknown, number>) => {
-    target[DECORATOR_META_PREFIX + propertyKey] = {
-      type: NzPrimitive.Float,
-      key: key ?? propertyKey,
-      propertyKey,
-      initialValue: 0
-    }
+  return (target: any, propertyKey: ClassFieldDecoratorContext<NzModule, number>) => {
+    const propName = String(propertyKey.name)
+    propertyKey.addInitializer(function () {
+      Reflect.defineMetadata(
+        {
+          type: NzPrimitive.Float,
+          key: key ?? propName,
+          propertyKey: propName,
+          initialValue: false
+        },
+        `${DECORATOR_META_PREFIX}:${propName}`,
+        this
+      )
+    })
   };
 }
 export function nzbool(key?: string) {
   return (target: any, propertyKey: ClassFieldDecoratorContext<unknown, boolean>) => {
-    target[DECORATOR_META_PREFIX + propertyKey] = {
+    const propName = String(propertyKey.name)
+
+    propertyKey.metadata[DECORATOR_META_PREFIX] = {
       type: NzPrimitive.Bool,
-      key: key ?? propertyKey,
-      propertyKey,
+      key: key ?? propName,
+      propertyKey: propName,
       initialValue: false
     }
   };
 }
 export function nzstring(key?: string) {
   return (target: any, propertyKey: ClassFieldDecoratorContext<unknown, string>) => {
-    target[DECORATOR_META_PREFIX + propertyKey] = {
+
+    const propName = String(propertyKey.name)
+
+    propertyKey.metadata[DECORATOR_META_PREFIX] = {
       type: NzPrimitive.String,
-      key: key ?? propertyKey,
-      propertyKey,
+      key: key ?? propName,
+      propertyKey: propName,
       initialValue: ""
     }
   };

@@ -7,11 +7,7 @@ export const htmlTemplate = `
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script type="importmap">
-    {
-      "imports": {
-        "@nzen/engine": "./nzen.js"
-      }
-    }
+    {{IMPORTMAP}}
     </script>
     <script type="module">
       import project from "./project.js"

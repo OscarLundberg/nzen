@@ -1,4 +1,5 @@
-
+import "reflect-metadata"
 export { NzModule } from "./module"
 export { NzAsset } from "./asset"
 export * from "./decorators"
+export type { NzEngine } from "@nzen/core"

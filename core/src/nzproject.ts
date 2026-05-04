@@ -1,3 +1,4 @@
+import { NzAssetConfig } from "./nzassetconfig"
 import { NzEntityConfig } from "./nzentityconfig"
 import { NzModuleConfig } from "./nzmodule"
 
@@ -12,7 +13,9 @@ export type NzProjectConfig = {
    */
   modules: Record<string, NzModuleConfig>
   entities: Record<string, NzEntityConfig>
+  assetTypes: Record<string, NzAssetConfig>
   config: NzEntityConfig,
   // a list of every file that is included in the built project
-  files: string[]
-}
+  files: string[],
+
+} & Record<string, any>

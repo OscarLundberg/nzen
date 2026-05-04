@@ -1,8 +1,9 @@
 import shell from "shelljs";
 import { NzCModuleConfig } from "../modules";
 import { js } from "./js";
+import { NzProjectConfig } from "@nzen/core";
 
-export async function c(conf: NzCModuleConfig) {
+export async function c(conf: NzCModuleConfig, proj: NzProjectConfig) {
 
   const compiledJs = `${conf.name}.compiled.js`
 
@@ -17,5 +18,5 @@ export async function c(conf: NzCModuleConfig) {
     ...conf,
     type: "js",
     entrypoint: compiledJs
-  })
+  }, proj)
 }

@@ -9,7 +9,8 @@
     "rootDir": "./src",
     "outDir": "dist",
     "moduleResolution": "nodenext",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "experimentalDecorators": true
   },
   "exclude": [
     "node_modules"
