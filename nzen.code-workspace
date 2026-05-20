@@ -4,12 +4,13 @@
 			"path": "."
 		},
 		{
-			"path": "./consumer",
-			"name": "consumer"
+			"path": "./web",
+			"name": "web"
 		}
 	],
 	"settings": {
 		"files.exclude": {
+			"web": true,
 			"consumer": true,
 			"**/.git": true,
 			"**/.svn": true,

@@ -1,4 +1,4 @@
-import { NzMemSlot } from "@nzen/core/src/nzmemslot";
+import { NzMemSlot } from "@nzen/core";
 import "./global.d.ts"
 import { createSlot } from "./wasmmemslot";
 import { NzEntity } from "./models/entity.js";

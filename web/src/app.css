@@ -1,3 +1,13 @@
+html,
+body,
+main,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
 :root,
 [data-bs-theme=dark],
 [data-bs-theme=light] {
