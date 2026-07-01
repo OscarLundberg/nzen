@@ -1,0 +1,7 @@
+{
+  "name": "devpad",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}

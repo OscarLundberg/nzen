@@ -5,3 +5,4 @@ consumer
 librust/target
 docs/site
 .wrangler
+.pnpm-store

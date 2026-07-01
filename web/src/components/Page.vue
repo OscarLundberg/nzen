@@ -14,6 +14,9 @@ const props = withDefaults(
 </template>
 
 <style scoped>
+div {
+  height: 100vh;
+}
 hr {
   background-color: transparent;
   margin-top: 0px;

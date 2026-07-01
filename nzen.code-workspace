@@ -6,6 +6,10 @@
 		{
 			"path": "./web",
 			"name": "web"
+		},
+		{ 
+			"path": "./devpad",
+			"name": "devpad"
 		}
 	],
 	"settings": {

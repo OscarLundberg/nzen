@@ -56,12 +56,18 @@
     "lib": [
       "DOM",
       "ES2025"
-    ]
+    ],
+    "sourceMap": true
   },
   "include": [
     "src/**/*"
   ],
   "exclude": [
     "node_modules"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
   ]
 }
